@@ -228,6 +228,7 @@ function renderCart() {
                 cart = [];
                 saveCart();
                 renderCart();
+                window.location.href = 'cart'
             };
         }
     }

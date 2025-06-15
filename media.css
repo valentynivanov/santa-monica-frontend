@@ -181,7 +181,34 @@
     .menu-button{
         font-size: 15px;
     }
+    /* Mobile styles for floating cart button */
+    .floating-cart-button {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .floating-cart-button .menu-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .floating-cart-button .menu-button svg {
+        width: 20px;
+        height: 20px;
+    }
+    .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Responsive design for About and Contact pages */
+    .about-image, .contact-image {
+        order: -1;
+    }
+
+    .about-text h1, .contact-text h1 {
+        font-size: 2rem;
+    }
 }
+
 
 @media (max-width:750px){
     .welcome {

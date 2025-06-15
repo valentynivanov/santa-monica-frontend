@@ -526,21 +526,6 @@ header a{
     color: #e67e22;
 }
 
-/* Responsive design for About and Contact pages */
-@media (max-width: 768px) {
-    .about-grid, .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image, .contact-image {
-        order: -1;
-    }
-
-    .about-text h1, .contact-text h1 {
-        font-size: 2rem;
-    }
-}
-
 /* About us section */
 
 #about{
@@ -846,35 +831,6 @@ footer a:hover::after{
     margin-top: 2rem;
 }
 
-/* iPhone 14 Pro Max */
-@media (max-width: 430px) {
-    .header {
-        padding:10px 10px;
-    }
-    .nav-branding{
-        font-size:30px;
-    }
-    .home{
-        margin:10px;
-        padding:5px;
-    }
-    .wine{
-        margin-right:10px;
-    }
-    .home img {
-        max-width: 100%;
-        height: 250px;
-        object-fit: cover;
-        margin: 1rem 0;
-    }
-    .welcome {
-        font-size: 3.5rem;
-        padding:0;
-        margin: 0;
-        margin-bottom:5px;
-    }
-}
-
 /* Floating Cart Button */
 .floating-cart-button {
     position: fixed;
@@ -931,22 +887,6 @@ footer a:hover::after{
     }
 }
 
-/* Mobile styles for floating cart button */
-@media (max-width: 768px) {
-    .floating-cart-button {
-        right: 15px;
-        bottom: 15px;
-    }
-    
-    .floating-cart-button .menu-button {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    .floating-cart-button .menu-button svg {
-        width: 20px;
-        height: 20px;
-    }
+.min-vh-70{
+    min-height: 70vh;
 }
-
-
