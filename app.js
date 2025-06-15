@@ -166,7 +166,7 @@ function renderCart() {
     const cartItemsList = document.getElementById('cart-items-list');
     const totalPriceElement = document.getElementById('total-price');
     const clearCartButton = document.getElementById('clear-cart');
-    const checkoutButton = document.querySelector('.btn-success[href="#"]');
+    const checkoutButton = document.getElementById('checkout-button');
     const totalPriceContainer = document.querySelector('.total_price');
     
     if (cartItemsList) {
