@@ -1,5 +1,5 @@
 import {pizzas, sides, drinks} from './data.js'
-
+console.log('App loaded pizzas:', pizzas)
 // Cart state management
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
