@@ -1,0 +1,344 @@
+/* Media Queries */
+
+@media (max-width:1210px){
+    .welcome {
+        font-size:4rem;
+    }
+    .hero-text h2{
+        font-size:2.5rem;
+    }
+    .home {
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    .hamburger-menu{
+        display:block;
+    }
+
+    .hamburger-menu.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger-menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        border-top: 1px solid white ;
+        position:fixed;
+        left:-100%;
+        top: 70px;
+        gap:0;
+        flex-direction:column;
+        background-color:#2c3e50;
+        width:100%;
+        text-align: center;
+        transition: 0.3s ;
+        padding: 1rem 0;
+    }
+    .nav-item{
+        margin:1rem 0;
+    }
+    .nav-menu.active{
+        left:0;
+    }
+    .welcome {
+        font-size:3.5rem;
+    }
+    .hero-text h2{
+        font-size:2rem;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home img {
+        max-width: 100%;
+        margin: 2rem 0;
+    }
+    .content {
+        max-width: 100%;
+    }
+    .content h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .cart_product_name{
+        font-size: 25px;
+    }
+    #cart-items-list button,
+    .btn-success,
+    .btn-danger{
+    font-size: 15px;
+    }
+    #cart-items-list p {
+        font-size: 17px;
+    }
+    .nav-menu{
+        top:99.19px;
+    }
+}
+
+@media (max-width:992px){
+    .hero-text h2{
+        font-size:35px;
+    }
+    #cart-items-list .list-group-item {
+        flex-direction: column;
+        align-items: flex-start; /* Adjust alignment for column layout */
+    }
+
+}
+
+@media (max-width:865px){
+    .welcome {
+        font-size:70px;
+    }
+    .hero-text h2{
+        font-size:30px;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .cart_product_name{
+        font-size: 20px;
+    }
+    #cart-items-list p {
+        font-size: 15px;
+    }
+    #cart-items-list button,
+    .btn-success,
+    .btn-danger{
+    font-size: 12px;
+    }
+}
+
+@media (max-width:768px){
+    .cart_product_name{
+        font-size: 30px !important;
+        width:100%;
+        text-align: center;
+    }
+    #cart-items-list p {
+        font-size: 20px;
+    }
+    #cart-items-list button,
+    .btn-success,
+    .btn-danger{
+    font-size: 15px;
+    }
+    #cart-items-list .list-group-item {
+        flex-direction: column;
+        align-items: flex-start; /* Adjust alignment for column layout */
+    }
+
+    #cart-items-list .cart_image {
+        width: 100%;
+        max-width: 200px; /* Adjust as needed */
+        height: auto;
+        margin-bottom: 1rem; /* Add space below image */
+    }
+
+    #cart-items-list h2,
+    #cart-items-list p,
+    #cart-items-list button {
+        margin-bottom: 0.5rem; /* Add spacing between elements */
+    }
+    .p_cart{
+        margin-bottom:0;
+    }
+    .cart-button{
+        margin: 30px auto;
+    }
+    .list-group-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart_image {
+        margin: 0 0 1rem 0;
+    }
+
+    .cart_product_name {
+        font-size: 1.3rem;
+    }
+
+    #cart-items-list p {
+        font-size: 1rem;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+    .menu-button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px){
+    .welcome {
+        font-size:60px;
+    }
+    .hero-text h2{
+        font-size:25px;
+    }
+}
+
+@media (max-width:630px){
+    .welcome {
+        font-size:50px;
+    }
+    .hero-text h2{
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+}
+
+@media (max-width:590px){
+    .welcome {
+        font-size:40px;
+    }
+    .hero-text h2{
+        font-size:20px;
+    }
+    .details{
+        padding: 0;
+    }
+
+}
+
+@media (max-width:490px) {
+    .welcome {
+        font-size:40px;
+    }
+    .hero-text {
+        padding:0;
+    }
+    .hero-text h2{
+        font-size:20px;
+        padding:0;
+    }
+    .hero-button {
+        padding: 2.5px 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .cart_product_name {
+        font-size: 1.2rem;
+    }
+
+    .cart_image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .total_price {
+        font-size: 1.5rem;
+    }
+} 
+
+/* iPhone 14 Pro Max */
+@media (max-width: 430px) {
+    .header {
+        padding:10px 10px;
+    }
+    .nav-branding{
+        font-size:30px;
+    }
+    .home{
+        margin:10px;
+        padding:5px;
+    }
+    .wine{
+        margin-right:10px;
+    }
+    .home img {
+        margin-left:5px;
+    }
+    .welcome {
+        font-size: 2rem;
+        padding:0;
+        margin: 0;
+        margin-bottom:5px;
+    }
+    footer{
+        margin: 0;
+        padding: 0;
+    }
+    .copyright{
+        font-size:12px;
+        padding-top:10px;
+    }
+    .nav-menu {
+        top: 92px;
+    }
+    .container h2 {
+        font-size:25px;
+    }
+    #contact_us p{
+        margin-bottom:10px;
+    }
+    .about_img{
+        margin:0;
+    }
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content p {
+        font-size: 0.9rem;
+    }
+    .product_image {
+        height: 160px;
+    }
+}
+
+/* iPhone 12 Pro */
+@media (max-width: 390px) {
+    .welcome{
+        font-size:1.8rem;
+    }
+    .hero-text h2 {
+        font-size:1.2rem;
+    }
+    .home {
+        margin:5px;
+    }
+    .content h1 {
+        font-size:1.3rem;
+    }
+    .content p {
+        font-size: 0.85rem;
+    }
+    .wine {
+        margin-right:10px;
+    }
+    footer{
+        margin:0;
+    }
+    .about_img{
+        margin:0;
+    }
+    #contact_us p {
+        font-size:15px;
+    }
+    .product_image {
+        height: 150px;
+    }
+}
