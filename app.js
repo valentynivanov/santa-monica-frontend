@@ -7,7 +7,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop() || 'index.html';
+    const currentPage = currentPath.split('/').pop() || 'index';
 
     navLinks.forEach(link => {
         const linkPath = link.getAttribute('href');
@@ -248,10 +248,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     
     // Only run these if we're on the menu or cart page
-    if (window.location.pathname.includes('menu.html')) {
+    if (window.location.pathname.includes('menu')) {
         renderMenu();
     }
-    if (window.location.pathname.includes('cart.html')) {
+    if (window.location.pathname.includes('cart')) {
         renderCart();
         
         // Add checkout functionality
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 cart = []; // Clear the cart
                 saveCart(); // Save the empty cart
-                window.location.href = 'success.html'; // Redirect to success page
+                window.location.href = 'success'; // Redirect to success page
             });
         }
     }
@@ -277,10 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (product) {
                 addToCart(product);
-                if (window.location.pathname.includes('menu.html')) {
+                if (window.location.pathname.includes('menu')) {
                     renderMenu();
                 }
-                if (window.location.pathname.includes('cart.html')) {
+                if (window.location.pathname.includes('cart')) {
                     renderCart();
                 }
             }
