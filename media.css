@@ -227,8 +227,8 @@
         padding:0;
     }
     .hero-button {
-        padding: 2.5px 5px;
-        font-size: 12px;
+        padding: 10px 15px;
+        font-size: 17px;
     }
 }
 
@@ -270,7 +270,7 @@
         margin-left:5px;
     }
     .welcome {
-        font-size: 2rem;
+        font-size: 3.5rem;
         padding:0;
         margin: 0;
         margin-bottom:5px;
@@ -296,13 +296,13 @@
         margin:0;
     }
     .hero-text h2 {
-        font-size: 1.3rem;
+        font-size: 2.1rem;
     }
     .content h1 {
-        font-size: 1.5rem;
+        font-size: 2.1rem;
     }
     .content p {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
     .product_image {
         height: 160px;
@@ -312,19 +312,19 @@
 /* iPhone 12 Pro */
 @media (max-width: 390px) {
     .welcome{
-        font-size:1.8rem;
+        font-size:3rem;
     }
     .hero-text h2 {
-        font-size:1.2rem;
+        font-size:1.9rem;
     }
     .home {
         margin:5px;
     }
     .content h1 {
-        font-size:1.3rem;
+        font-size:1.9rem;
     }
     .content p {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
     }
     .wine {
         margin-right:10px;
