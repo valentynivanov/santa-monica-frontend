@@ -875,4 +875,78 @@ footer a:hover::after{
     }
 }
 
+/* Floating Cart Button */
+.floating-cart-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+}
+
+.floating-cart-button .menu-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.floating-cart-button .menu-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background-color: #d35400;
+}
+
+.floating-cart-button .menu-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Mobile styles for floating cart button */
+@media (max-width: 768px) {
+    .floating-cart-button {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .floating-cart-button .menu-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .floating-cart-button .menu-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 

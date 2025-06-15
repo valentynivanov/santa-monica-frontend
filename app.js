@@ -39,10 +39,25 @@ function initializeHamburgerMenu() {
 
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
+    const floatingCartButton = document.getElementById('floating-cart-button');
+    
     if (cartCount) {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
         cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+        
+        // Update floating cart button visibility
+        if (floatingCartButton) {
+            if (totalItems > 0) {
+                floatingCartButton.style.display = 'block';
+                floatingCartButton.style.animation = 'slideIn 0.3s ease-out';
+            } else {
+                floatingCartButton.style.animation = 'slideOut 0.3s ease-out';
+                setTimeout(() => {
+                    floatingCartButton.style.display = 'none';
+                }, 300);
+            }
+        }
     }
 }
 
@@ -228,6 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only run these if we're on the menu or cart page
     if (window.location.pathname.includes('menu')) {
         renderMenu();
+        // Hide floating cart button initially
+        const floatingCartButton = document.getElementById('floating-cart-button');
+        if (floatingCartButton) {
+            floatingCartButton.style.display = 'none';
+        }
     }
     if (window.location.pathname.includes('cart')) {
         renderCart();
