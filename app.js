@@ -7,11 +7,11 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop() || 'index';
+    const currentPage = currentPath === '/' ? '/' : currentPath.replace(/^\/|\/$/g, '');
 
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPage) {
+        const linkPath = link.getAttribute('href').replace(/^\/|\/$/g, '');
+        if (linkPath === currentPage || (link.getAttribute('href') === '/' && currentPage === '')) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
@@ -207,28 +207,6 @@ function renderCart() {
             </li>
         `).join('');
 
-        // Add click handlers to cart buttons
-        const cartAddButtons = cartItemsList.querySelectorAll('.add-to-cart');
-        cartAddButtons.forEach(button => {
-            button.onclick = function() {
-                const productId = parseInt(this.getAttribute('data-product-id'));
-                const product = [...pizzas, ...sides, ...drinks].find(p => p.id === productId);
-                if (product) {
-                    addToCart(product);
-                    renderCart();
-                }
-            };
-        });
-
-        const cartRemoveButtons = cartItemsList.querySelectorAll('.remove-from-cart');
-        cartRemoveButtons.forEach(button => {
-            button.onclick = function() {
-                const productId = parseInt(this.getAttribute('data-product-id'));
-                removeFromCart(productId);
-                renderCart();
-            };
-        });
-
         // Add clear cart functionality
         if (clearCartButton) {
             clearCartButton.onclick = function() {
@@ -283,6 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (window.location.pathname.includes('cart')) {
                     renderCart();
                 }
+            }
+        }
+        if (event.target.matches('.remove-from-cart')) {
+            const productId = parseInt(event.target.getAttribute('data-product-id'));
+            removeFromCart(productId);
+            if (window.location.pathname.includes('cart')) {
+                renderCart();
             }
         }
     });
